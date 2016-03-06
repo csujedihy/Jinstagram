@@ -10,23 +10,47 @@ import UIKit
 import Parse
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDelegate{
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Only exec once
         Parse.initializeWithConfiguration(
             ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = "Jinstagram"
                 configuration.clientKey = "asdkjfhaskdfhkahsdkfhiqw12312"
                 configuration.server = "https://lit-depths-58220.herokuapp.com/parse"
+
             })
         )
+        
+        if PFUser.currentUser() != nil {
+            window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeNC = storyboard.instantiateViewControllerWithIdentifier("HomeNavController") as! UINavigationController
+            homeNC.tabBarItem.title = "Home"
+
+            let uploadNC = storyboard.instantiateViewControllerWithIdentifier("HomeNavController") as! UINavigationController
+            uploadNC.tabBarItem.title = "Upload"
+            
+            let profileNC = storyboard.instantiateViewControllerWithIdentifier("ProfileNavController")
+            profileNC.tabBarItem.title = "Me"
+            
+            let tabBarController = UITabBarController()
+            tabBarController.viewControllers = [homeNC, profileNC]
+            window?.rootViewController = tabBarController
+            window?.makeKeyAndVisible()
+  
+        }
+        
         return true
     }
 
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

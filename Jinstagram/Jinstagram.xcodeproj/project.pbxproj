@@ -15,6 +15,25 @@
 		C12F765B1C8544B60059EC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12F76591C8544B60059EC65 /* LaunchScreen.storyboard */; };
 		C12F76661C8544B70059EC65 /* JinstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12F76651C8544B70059EC65 /* JinstagramTests.swift */; };
 		C12F76711C8544B70059EC65 /* JinstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12F76701C8544B70059EC65 /* JinstagramUITests.swift */; };
+		C13651911C865972002BAA5D /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13651901C865972002BAA5D /* TestViewController.swift */; };
+		C13651931C866342002BAA5D /* PictureTakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13651921C866342002BAA5D /* PictureTakeViewController.swift */; };
+		C13651961C868BF8002BAA5D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13651951C868BF8002BAA5D /* Post.swift */; };
+		C16BF0691C8B6E80002156D9 /* PhotoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BF0671C8B6E80002156D9 /* PhotoHeader.swift */; };
+		C16BF06A1C8B6E80002156D9 /* PhotoHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C16BF0681C8B6E80002156D9 /* PhotoHeader.xib */; };
+		C16BF06C1C8B6FDE002156D9 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BF06B1C8B6FDE002156D9 /* RoundedImageView.swift */; };
+		C16BF06E1C8B74AB002156D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BF06D1C8B74AB002156D9 /* User.swift */; };
+		C16BF0721C8B8128002156D9 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BF0711C8B8128002156D9 /* TimeFormatter.swift */; };
+		C16BF0741C8B88BA002156D9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BF0731C8B88BA002156D9 /* ProfileViewController.swift */; };
+		C16BF0771C8B899D002156D9 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BF0751C8B899D002156D9 /* ProfileHeader.swift */; };
+		C16BF0781C8B899D002156D9 /* ProfileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C16BF0761C8B899D002156D9 /* ProfileHeader.xib */; };
+		C16BF07B1C8B8DA5002156D9 /* ThumbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BF0791C8B8DA5002156D9 /* ThumbCell.swift */; };
+		C16BF07C1C8B8DA5002156D9 /* ThumbCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C16BF07A1C8B8DA5002156D9 /* ThumbCell.xib */; };
+		C16BF07E1C8B9E73002156D9 /* ProfileSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BF07D1C8B9E73002156D9 /* ProfileSectionHeader.swift */; };
+		C17E219A1C8644A900703C70 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E21991C8644A900703C70 /* HomeViewController.swift */; };
+		C1A0F9A51C86938400A7B36A /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A0F9A31C86938400A7B36A /* PhotoCell.swift */; };
+		C1A0F9A61C86938400A7B36A /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1A0F9A41C86938400A7B36A /* PhotoCell.xib */; };
+		C1A0F9A91C86955500A7B36A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A0F9A81C86955500A7B36A /* Photo.swift */; };
+		C1A0F9AB1C86DCA000A7B36A /* YHLazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A0F9AA1C86DCA000A7B36A /* YHLazyImageView.swift */; };
 		C1FDACAD1C854766009C0CFB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDACAC1C854766009C0CFB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +70,25 @@
 		C12F766C1C8544B70059EC65 /* JinstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JinstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C12F76701C8544B70059EC65 /* JinstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JinstagramUITests.swift; sourceTree = "<group>"; };
 		C12F76721C8544B70059EC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C13651901C865972002BAA5D /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		C13651921C866342002BAA5D /* PictureTakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureTakeViewController.swift; sourceTree = "<group>"; };
+		C13651951C868BF8002BAA5D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C16BF0671C8B6E80002156D9 /* PhotoHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoHeader.swift; sourceTree = "<group>"; };
+		C16BF0681C8B6E80002156D9 /* PhotoHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoHeader.xib; sourceTree = "<group>"; };
+		C16BF06B1C8B6FDE002156D9 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		C16BF06D1C8B74AB002156D9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C16BF0711C8B8128002156D9 /* TimeFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		C16BF0731C8B88BA002156D9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C16BF0751C8B899D002156D9 /* ProfileHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		C16BF0761C8B899D002156D9 /* ProfileHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeader.xib; sourceTree = "<group>"; };
+		C16BF0791C8B8DA5002156D9 /* ThumbCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbCell.swift; sourceTree = "<group>"; };
+		C16BF07A1C8B8DA5002156D9 /* ThumbCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbCell.xib; sourceTree = "<group>"; };
+		C16BF07D1C8B9E73002156D9 /* ProfileSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSectionHeader.swift; sourceTree = "<group>"; };
+		C17E21991C8644A900703C70 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C1A0F9A31C86938400A7B36A /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		C1A0F9A41C86938400A7B36A /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		C1A0F9A81C86955500A7B36A /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C1A0F9AA1C86DCA000A7B36A /* YHLazyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHLazyImageView.swift; sourceTree = "<group>"; };
 		C1FDACAC1C854766009C0CFB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D5281819874432A9AB48CABC /* Pods_Jinstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jinstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,6 +153,9 @@
 		C12F764F1C8544B60059EC65 /* Jinstagram */ = {
 			isa = PBXGroup;
 			children = (
+				C1A0F9A71C86948700A7B36A /* Model */,
+				C1A0F99E1C86925300A7B36A /* Views */,
+				C13651941C868BDB002BAA5D /* Helpers */,
 				C1FDACAB1C854751009C0CFB /* Controllers */,
 				C12F76501C8544B60059EC65 /* AppDelegate.swift */,
 				C12F76521C8544B60059EC65 /* ViewController.swift */,
@@ -144,10 +185,50 @@
 			path = JinstagramUITests;
 			sourceTree = "<group>";
 		};
+		C13651941C868BDB002BAA5D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C13651951C868BF8002BAA5D /* Post.swift */,
+				C16BF0711C8B8128002156D9 /* TimeFormatter.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		C1A0F99E1C86925300A7B36A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1A0F9A31C86938400A7B36A /* PhotoCell.swift */,
+				C1A0F9A41C86938400A7B36A /* PhotoCell.xib */,
+				C1A0F9AA1C86DCA000A7B36A /* YHLazyImageView.swift */,
+				C16BF0671C8B6E80002156D9 /* PhotoHeader.swift */,
+				C16BF0681C8B6E80002156D9 /* PhotoHeader.xib */,
+				C16BF06B1C8B6FDE002156D9 /* RoundedImageView.swift */,
+				C16BF0751C8B899D002156D9 /* ProfileHeader.swift */,
+				C16BF0761C8B899D002156D9 /* ProfileHeader.xib */,
+				C16BF0791C8B8DA5002156D9 /* ThumbCell.swift */,
+				C16BF07A1C8B8DA5002156D9 /* ThumbCell.xib */,
+				C16BF07D1C8B9E73002156D9 /* ProfileSectionHeader.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C1A0F9A71C86948700A7B36A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1A0F9A81C86955500A7B36A /* Photo.swift */,
+				C16BF06D1C8B74AB002156D9 /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C1FDACAB1C854751009C0CFB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				C1FDACAC1C854766009C0CFB /* LoginViewController.swift */,
+				C17E21991C8644A900703C70 /* HomeViewController.swift */,
+				C13651901C865972002BAA5D /* TestViewController.swift */,
+				C13651921C866342002BAA5D /* PictureTakeViewController.swift */,
+				C16BF0731C8B88BA002156D9 /* ProfileViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -267,6 +348,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16BF06A1C8B6E80002156D9 /* PhotoHeader.xib in Resources */,
+				C1A0F9A61C86938400A7B36A /* PhotoCell.xib in Resources */,
+				C16BF0781C8B899D002156D9 /* ProfileHeader.xib in Resources */,
+				C16BF07C1C8B8DA5002156D9 /* ThumbCell.xib in Resources */,
 				C12F765B1C8544B60059EC65 /* LaunchScreen.storyboard in Resources */,
 				C12F76581C8544B60059EC65 /* Assets.xcassets in Resources */,
 				C12F76561C8544B60059EC65 /* Main.storyboard in Resources */,
@@ -342,9 +427,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16BF06E1C8B74AB002156D9 /* User.swift in Sources */,
+				C13651911C865972002BAA5D /* TestViewController.swift in Sources */,
+				C1A0F9AB1C86DCA000A7B36A /* YHLazyImageView.swift in Sources */,
 				C1FDACAD1C854766009C0CFB /* LoginViewController.swift in Sources */,
+				C16BF07E1C8B9E73002156D9 /* ProfileSectionHeader.swift in Sources */,
 				C12F76531C8544B60059EC65 /* ViewController.swift in Sources */,
+				C1A0F9A91C86955500A7B36A /* Photo.swift in Sources */,
 				C12F76511C8544B60059EC65 /* AppDelegate.swift in Sources */,
+				C16BF07B1C8B8DA5002156D9 /* ThumbCell.swift in Sources */,
+				C1A0F9A51C86938400A7B36A /* PhotoCell.swift in Sources */,
+				C16BF0771C8B899D002156D9 /* ProfileHeader.swift in Sources */,
+				C13651931C866342002BAA5D /* PictureTakeViewController.swift in Sources */,
+				C16BF0721C8B8128002156D9 /* TimeFormatter.swift in Sources */,
+				C16BF06C1C8B6FDE002156D9 /* RoundedImageView.swift in Sources */,
+				C16BF0691C8B6E80002156D9 /* PhotoHeader.swift in Sources */,
+				C16BF0741C8B88BA002156D9 /* ProfileViewController.swift in Sources */,
+				C13651961C868BF8002BAA5D /* Post.swift in Sources */,
+				C17E219A1C8644A900703C70 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

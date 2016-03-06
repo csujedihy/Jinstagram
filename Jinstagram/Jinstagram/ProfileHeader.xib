@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileHeader" id="gTV-IL-0wX" customClass="ProfileHeader" customModule="Jinstagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="157"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="157"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iat-Ug-GGT" customClass="RoundedImageView" customModule="Jinstagram" customModuleProvider="target" colorLabel="IBBuiltInLabel-Orange">
+                        <rect key="frame" x="8" y="8" width="70" height="70"/>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="rNI-eR-sUQ"/>
+                            <constraint firstAttribute="width" constant="70" id="toM-qI-C73"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="137" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hm-gf-tnt">
+                        <rect key="frame" x="122" y="8" width="23.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6A-Wx-aEB">
+                        <rect key="frame" x="117" y="27" width="35" height="16.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="137" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VE7-ZW-9oF">
+                        <rect key="frame" x="257" y="8" width="23.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlL-LO-Ejm">
+                        <rect key="frame" x="8" y="87" width="22.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The guy who loves me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xud-eX-rRC">
+                        <rect key="frame" x="8" y="107" width="140.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="like" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2En-W8-zzM">
+                        <rect key="frame" x="259" y="27" width="21" height="16.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="2En-W8-zzM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" multiplier="1.6" id="02U-UG-9wr"/>
+                <constraint firstItem="GlL-LO-Ejm" firstAttribute="top" secondItem="iat-Ug-GGT" secondAttribute="bottom" constant="9" id="6CQ-y4-3ML"/>
+                <constraint firstItem="k6A-Wx-aEB" firstAttribute="top" secondItem="6hm-gf-tnt" secondAttribute="bottom" constant="2.5" id="Chm-bi-97t"/>
+                <constraint firstItem="6hm-gf-tnt" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" multiplier="0.8" id="DEh-kv-ZA7"/>
+                <constraint firstItem="VE7-ZW-9oF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="GYs-Wu-gKu"/>
+                <constraint firstItem="iat-Ug-GGT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="HQT-vd-Bpd"/>
+                <constraint firstItem="VE7-ZW-9oF" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" multiplier="1.6" id="Op6-v1-lWa"/>
+                <constraint firstItem="iat-Ug-GGT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" id="Ou1-A4-3dD"/>
+                <constraint firstItem="GlL-LO-Ejm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="ST5-ux-Std"/>
+                <constraint firstItem="xud-eX-rRC" firstAttribute="top" secondItem="GlL-LO-Ejm" secondAttribute="bottom" constant="3.5" id="T9V-BR-mWW"/>
+                <constraint firstItem="2En-W8-zzM" firstAttribute="top" secondItem="VE7-ZW-9oF" secondAttribute="bottom" constant="2.5" id="TDe-cm-8dP"/>
+                <constraint firstItem="xud-eX-rRC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hlD-93-dWf"/>
+                <constraint firstItem="k6A-Wx-aEB" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" multiplier="0.8" id="vXG-fV-bM2"/>
+                <constraint firstItem="6hm-gf-tnt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="xzq-uw-dv0"/>
+            </constraints>
+            <size key="customSize" width="336" height="157"/>
+            <connections>
+                <outlet property="avatarImageView" destination="iat-Ug-GGT" id="03J-wi-dPO"/>
+                <outlet property="descriptionLabel" destination="xud-eX-rRC" id="2OQ-hY-LpT"/>
+                <outlet property="likeNumberLabel" destination="VE7-ZW-9oF" id="R2y-xx-aQw"/>
+                <outlet property="postNumberLabel" destination="6hm-gf-tnt" id="N4K-af-uib"/>
+                <outlet property="usernameLabel" destination="GlL-LO-Ejm" id="RzK-hX-rlj"/>
+            </connections>
+            <point key="canvasLocation" x="364" y="296.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

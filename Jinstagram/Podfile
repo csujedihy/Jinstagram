@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'Jinstagram' do
 	pod 'Parse'
+	pod 'MBProgressHUD'
 end
 
 target 'JinstagramTests' do

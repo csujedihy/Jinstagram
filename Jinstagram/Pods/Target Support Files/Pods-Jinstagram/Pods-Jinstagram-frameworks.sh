@@ -85,9 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Jinstagram/Bolts.framework"
+  install_framework "Pods-Jinstagram/MBProgressHUD.framework"
   install_framework "Pods-Jinstagram/Parse.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Jinstagram/Bolts.framework"
+  install_framework "Pods-Jinstagram/MBProgressHUD.framework"
   install_framework "Pods-Jinstagram/Parse.framework"
 fi

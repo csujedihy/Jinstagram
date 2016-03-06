@@ -19,7 +19,24 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 print("Login successfully")
-                self.performSegueWithIdentifier("loginSegue", sender: nil)
+//                self.performSegueWithIdentifier("loginSegue", sender: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let homeNC = storyboard.instantiateViewControllerWithIdentifier("HomeNavController") as! UINavigationController
+                let homeVC = homeNC.topViewController
+                homeNC.tabBarItem.title = "Home"
+                
+                
+                let uploadNC = storyboard.instantiateViewControllerWithIdentifier("HomeNavController") as! UINavigationController
+                let uploadVC = uploadNC.topViewController
+                uploadNC.tabBarItem.title = "Upload"
+                
+                let profileNC = storyboard.instantiateViewControllerWithIdentifier("ProfileNavController")
+                profileNC.tabBarItem.title = "Me"
+                
+                let tabBarController = UITabBarController()
+                tabBarController.viewControllers = [homeNC, profileNC]
+                self.presentViewController(tabBarController, animated: true, completion: nil)
+
             }
         }
     }
