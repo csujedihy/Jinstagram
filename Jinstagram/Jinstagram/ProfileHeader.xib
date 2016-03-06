@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -24,46 +24,54 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="137" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hm-gf-tnt">
-                        <rect key="frame" x="122" y="8" width="23.5" height="16.5"/>
+                        <rect key="frame" x="122" y="8" width="24" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6A-Wx-aEB">
-                        <rect key="frame" x="117" y="27" width="35" height="16.5"/>
+                        <rect key="frame" x="117" y="27" width="35" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="137" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VE7-ZW-9oF">
-                        <rect key="frame" x="257" y="8" width="23.5" height="16.5"/>
+                        <rect key="frame" x="257" y="8" width="24" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlL-LO-Ejm">
-                        <rect key="frame" x="8" y="87" width="22.5" height="16.5"/>
+                        <rect key="frame" x="8" y="87" width="23" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The guy who loves me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xud-eX-rRC">
-                        <rect key="frame" x="8" y="107" width="140.5" height="16.5"/>
+                        <rect key="frame" x="8" y="107" width="141" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="like" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2En-W8-zzM">
-                        <rect key="frame" x="259" y="27" width="21" height="16.5"/>
+                        <rect key="frame" x="259" y="27" width="21" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2e-WC-rsx" userLabel="separator">
+                        <rect key="frame" x="0.0" y="154" width="336" height="1"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="aFJ-dc-fgp"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
                 <constraint firstItem="2En-W8-zzM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" multiplier="1.6" id="02U-UG-9wr"/>
+                <constraint firstItem="X2e-WC-rsx" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="1fj-JG-M94"/>
                 <constraint firstItem="GlL-LO-Ejm" firstAttribute="top" secondItem="iat-Ug-GGT" secondAttribute="bottom" constant="9" id="6CQ-y4-3ML"/>
                 <constraint firstItem="k6A-Wx-aEB" firstAttribute="top" secondItem="6hm-gf-tnt" secondAttribute="bottom" constant="2.5" id="Chm-bi-97t"/>
                 <constraint firstItem="6hm-gf-tnt" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" multiplier="0.8" id="DEh-kv-ZA7"/>
@@ -74,8 +82,12 @@
                 <constraint firstItem="GlL-LO-Ejm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="ST5-ux-Std"/>
                 <constraint firstItem="xud-eX-rRC" firstAttribute="top" secondItem="GlL-LO-Ejm" secondAttribute="bottom" constant="3.5" id="T9V-BR-mWW"/>
                 <constraint firstItem="2En-W8-zzM" firstAttribute="top" secondItem="VE7-ZW-9oF" secondAttribute="bottom" constant="2.5" id="TDe-cm-8dP"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xud-eX-rRC" secondAttribute="bottom" constant="12" id="V3I-dj-pKu"/>
+                <constraint firstAttribute="trailing" secondItem="X2e-WC-rsx" secondAttribute="trailing" id="WU9-k2-kOm"/>
+                <constraint firstAttribute="bottom" secondItem="X2e-WC-rsx" secondAttribute="bottom" constant="2" id="cag-9b-OSe"/>
                 <constraint firstItem="xud-eX-rRC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hlD-93-dWf"/>
                 <constraint firstItem="k6A-Wx-aEB" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" multiplier="0.8" id="vXG-fV-bM2"/>
+                <constraint firstItem="X2e-WC-rsx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xTN-hr-mPX"/>
                 <constraint firstItem="6hm-gf-tnt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="xzq-uw-dv0"/>
             </constraints>
             <size key="customSize" width="336" height="157"/>

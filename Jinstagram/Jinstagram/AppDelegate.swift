@@ -10,14 +10,33 @@ import UIKit
 import Parse
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDelegate, HomeViewControllerDelegate {
 
     var window: UIWindow?
-
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    func homeView(didLogout homeView: HomeViewController) {
+        let vc = storyboard.instantiateViewControllerWithIdentifier("LoginViewID") as! LoginViewController
+        window?.rootViewController = vc
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-
+        let barStyle = UIBarButtonItem.appearance()
+        barStyle.setBackButtonTitlePositionAdjustment(UIOffsetMake(-100, -60), forBarMetrics:UIBarMetrics.Default)
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 29.0/255, green: 64.0/255, blue: 104.0/255, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().alpha = 0.8
+        UINavigationBar.appearance().translucent = true
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UINavigationBar.appearance().titleTextAttributes = titleDict as! [String : AnyObject]
+        
+        UITabBar.appearance().barTintColor = UIColor(red: 29.0/255, green: 64.0/255, blue: 104.0/255, alpha: 1.0)
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        
+        
+        
         // Only exec once
         Parse.initializeWithConfiguration(
             ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
@@ -32,13 +51,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
             window = UIWindow(frame: UIScreen.mainScreen().bounds)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let homeNC = storyboard.instantiateViewControllerWithIdentifier("HomeNavController") as! UINavigationController
+            let homeVC = homeNC.topViewController as! HomeViewController
+            homeVC.delegate = self
             homeNC.tabBarItem.title = "Home"
+            homeNC.tabBarItem.image = UIImage(named: "home")
 
-            let uploadNC = storyboard.instantiateViewControllerWithIdentifier("HomeNavController") as! UINavigationController
-            uploadNC.tabBarItem.title = "Upload"
             
             let profileNC = storyboard.instantiateViewControllerWithIdentifier("ProfileNavController")
             profileNC.tabBarItem.title = "Me"
+            profileNC.tabBarItem.image = UIImage(named: "profile")
+
             
             let tabBarController = UITabBarController()
             tabBarController.viewControllers = [homeNC, profileNC]

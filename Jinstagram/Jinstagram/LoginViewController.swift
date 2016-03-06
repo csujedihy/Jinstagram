@@ -9,11 +9,16 @@
 import UIKit
 import Parse
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, HomeViewControllerDelegate {
 
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    
     
     @IBAction func signInOnTap(sender: AnyObject) {
         PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: NSError?) -> Void in
@@ -22,16 +27,17 @@ class LoginViewController: UIViewController {
 //                self.performSegueWithIdentifier("loginSegue", sender: nil)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeNC = storyboard.instantiateViewControllerWithIdentifier("HomeNavController") as! UINavigationController
-                let homeVC = homeNC.topViewController
+                let homeVC = homeNC.topViewController as! HomeViewController
+                homeVC.delegate = self
+                homeVC.fromLoginView = true
                 homeNC.tabBarItem.title = "Home"
-                
-                
-                let uploadNC = storyboard.instantiateViewControllerWithIdentifier("HomeNavController") as! UINavigationController
-                let uploadVC = uploadNC.topViewController
-                uploadNC.tabBarItem.title = "Upload"
+                homeNC.tabBarItem.image = UIImage(named: "home")
+
                 
                 let profileNC = storyboard.instantiateViewControllerWithIdentifier("ProfileNavController")
                 profileNC.tabBarItem.title = "Me"
+                profileNC.tabBarItem.image = UIImage(named: "profile")
+
                 
                 let tabBarController = UITabBarController()
                 tabBarController.viewControllers = [homeNC, profileNC]
@@ -39,6 +45,12 @@ class LoginViewController: UIViewController {
 
             }
         }
+    }
+    
+    func homeView(didLogout homeView: HomeViewController) {
+        print("loginView logout")
+        usernameField.text = ""
+        passwordField.text = ""
     }
     
     
@@ -60,7 +72,16 @@ class LoginViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInButton.layer.cornerRadius = 4.0
+        signInButton.layer.borderWidth = 1.0
+        signInButton.layer.borderColor = UIColor(white: 0.8, alpha: 0.79).CGColor
+        
+        signUpButton.layer.cornerRadius = 4.0
+        signUpButton.layer.borderWidth = 1.0
+        signUpButton.layer.borderColor = UIColor(white: 0.8, alpha: 0.79).CGColor
+        
 
+        
         // Do any additional setup after loading the view.
     }
 

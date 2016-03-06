@@ -73,6 +73,7 @@ class Photo: NSObject {
                         if let objectId = self.objectId {
                             Photo.sharedCache.setObject(resUIImage, forKey: objectId, cost: result.length)
                         }
+                        self.image = resUIImage
                         success(retImage: resUIImage)
                     } else {
                         failure(error)
@@ -89,7 +90,6 @@ class Photo: NSObject {
             failure(nil)
         }
 
-    
     }
     
     
@@ -143,6 +143,7 @@ class Photo: NSObject {
                 failure(error)
             }
         }
+        
     }
     
     class func fetchPhotosArray(success: (retPhotos: [Photo]) ->(), failure: (NSError?) ->()) {

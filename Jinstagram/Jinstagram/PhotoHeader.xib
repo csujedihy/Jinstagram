@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TeddyBear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyy-fZ-7DJ">
@@ -21,28 +21,44 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI4-Pn-rJS">
-                        <rect key="frame" x="292" y="8" width="19.5" height="16"/>
+                        <rect key="frame" x="292" y="8" width="20" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ggp-Cn-3qr" customClass="RoundedImageView" customModule="Jinstagram" customModuleProvider="target">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="ggp-Cn-3qr" customClass="YHLazyImageView" customModule="Jinstagram" customModuleProvider="target">
                         <rect key="frame" x="8" y="9" width="32" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="32" id="4vF-8E-cTY"/>
                             <constraint firstAttribute="height" constant="32" id="RdZ-bo-zfE"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcW-E4-OcE" userLabel="seperator">
+                        <rect key="frame" x="0.0" y="48" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ieY-6p-GGN"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ggp-Cn-3qr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="6Dc-sa-gNK"/>
                     <constraint firstItem="Lyy-fZ-7DJ" firstAttribute="leading" secondItem="ggp-Cn-3qr" secondAttribute="trailing" constant="8" id="9sX-JU-aMI"/>
+                    <constraint firstAttribute="bottom" secondItem="pcW-E4-OcE" secondAttribute="bottom" id="BLk-nt-q0u"/>
                     <constraint firstItem="LI4-Pn-rJS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Chc-0l-sJx"/>
+                    <constraint firstAttribute="trailing" secondItem="pcW-E4-OcE" secondAttribute="trailing" id="GEQ-I5-Ihq"/>
+                    <constraint firstItem="pcW-E4-OcE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TC8-EE-b7k"/>
                     <constraint firstAttribute="bottom" secondItem="ggp-Cn-3qr" secondAttribute="bottom" constant="8.5" id="hFL-Qf-bSm"/>
                     <constraint firstItem="ggp-Cn-3qr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="lr6-Z7-eat"/>
                     <constraint firstAttribute="trailing" secondItem="LI4-Pn-rJS" secondAttribute="trailing" constant="8.5" id="uX2-AW-8MC"/>
+                    <constraint firstItem="LI4-Pn-rJS" firstAttribute="top" secondItem="pcW-E4-OcE" secondAttribute="bottom" id="vuv-nF-BzU"/>
                     <constraint firstItem="Lyy-fZ-7DJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xPO-yA-52S"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="vuv-nF-BzU"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatarImage" destination="ggp-Cn-3qr" id="Rhf-Cu-dLf"/>
@@ -52,4 +68,7 @@
             <point key="canvasLocation" x="546" y="334"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="default-avatar" width="256" height="256"/>
+    </resources>
 </document>

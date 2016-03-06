@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileSectionHeader: UICollectionReusableView {
-    @IBOutlet weak var avatarImageView: RoundedImageView!
+    @IBOutlet weak var avatarImageView: YHLazyImageView!
     
     
     @IBOutlet weak var postNumberLabel: UILabel!
@@ -19,5 +19,15 @@ class ProfileSectionHeader: UICollectionReusableView {
     @IBOutlet weak var usernameLabel: UILabel!
     
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var settingButton: UIButton!
+    
+    override func awakeFromNib() {
+        avatarImageView.clipsToBounds = true
+        avatarImageView.layer.cornerRadius = 15;
+        avatarImageView.layer.borderColor = UIColor(white: 0.7, alpha: 0.8).CGColor
+        avatarImageView.layer.borderWidth = 1;
+    }
+    
     
 }

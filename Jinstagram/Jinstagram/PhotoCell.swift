@@ -11,7 +11,6 @@ import UIKit
 class PhotoCell: UITableViewCell {
     var cellId: Int?
     @IBOutlet weak var captionLabel: UILabel!
-    
     @IBOutlet weak var photoView: YHLazyImageView!
     
     override func awakeFromNib() {

@@ -8,9 +8,18 @@
 
 import UIKit
 import Parse
-class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
+import MBProgressHUD
+
+@objc protocol HomeViewControllerDelegate {
+    func homeView(didLogout homeView: HomeViewController)
+}
+
+class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate, PictureTakeViewDelegate{
+    var fromLoginView = false
+    var refreshControl: UIRefreshControl?
+
     var photos = [Photo]()
-    
+    weak var delegate: HomeViewControllerDelegate?
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func cameraOnTap(sender: AnyObject) {
@@ -47,16 +56,6 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     
-    
-//    @IBAction func takePicOnTap(sender: AnyObject) {
-//        let vc = UIImagePickerController()
-//        vc.delegate = self
-//        vc.allowsEditing = true
-//        vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-//        
-//        self.presentViewController(vc, animated: true, completion: nil)
-//    }
-//    
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [String : AnyObject]) {
             print("asdasd")
@@ -69,8 +68,15 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBAction func logoutOnTap(sender: AnyObject) {
         PFUser.logOut()
-        dismissViewControllerAnimated(true, completion: nil)
+        if let delegate = self.delegate {
+            if fromLoginView {
+                dismissViewControllerAnimated(true, completion: nil)
+            }
+            delegate.homeView(didLogout: self)
+        }
+        
     }
+    
     
     
     override func viewWillAppear(animated: Bool) {
@@ -78,6 +84,14 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.tabBarController?.tabBar.hidden = false
         
     }
+    
+    
+    func pictureTakeView(pictureTakeView: PictureTakeViewController, success: Bool) {
+        if success {
+            fetchPhotos()
+        }
+    }
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return photos.count
@@ -87,12 +101,22 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         return 1
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("detailSegue", sender: photos[indexPath.section])
+    }
+    
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableCellWithIdentifier("PhotoHeader") as! PhotoHeader
         headerView.rowIndex = section
         let photo = photos[section]
         if let user = photo.user {
+            headerView.avatarImage.parseObjectId = user.pfObject?.objectId
             headerView.usernameLabel.text = user.userName
+            user.lazyfetchAvatar(headerView.avatarImage, success: { (retImage: UIImage) -> () in
+                headerView.avatarImage.image = retImage
+                }, failure: { (error: NSError?) -> () in
+                    print(error?.localizedDescription)
+            })
         }
         
         if headerView.avatarImage.userInteractionEnabled == false {
@@ -141,6 +165,27 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
     }
     
+    
+    func fetchPhotos() {
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        Photo.lazyFetchPhotosArray({ (retPhotos: [Photo]) -> () in
+            self.photos = retPhotos
+            self.tableView.reloadData()
+            self.refreshControl?.endRefreshing()
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            }) { (error: NSError?) -> () in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+                
+        }
+    
+    }
+    
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        fetchPhotos()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -151,16 +196,11 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         tableView.estimatedRowHeight = 260
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        Photo.lazyFetchPhotosArray({ (retPhotos: [Photo]) -> () in
-            self.photos = retPhotos
-            self.tableView.reloadData()
-            
-            }) { (error: NSError?) -> () in
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-                
-        }
+        refreshControl = UIRefreshControl()
+        refreshControl!.addTarget(self, action: "refreshControlAction:", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl!, atIndex: 0)
+        
+        fetchPhotos()
         
         
         // Do any additional setup after loading the view.
@@ -176,12 +216,23 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             let takenphoto = sender as! UIImage
             let vc = segue.destinationViewController as! PictureTakeViewController
             vc.takenPhoto = takenphoto
+            vc.delegate = self
             
         
         } else if segue.identifier == "profileSegueFromHome" {
             let vc = segue.destinationViewController as! ProfileViewController
             let user = sender as! User
             vc.otherAuthor = user
+        } else if segue.identifier == "detailSegue" {
+            let vc = segue.destinationViewController as! DetailPhotoViewController
+            let photo = sender as! Photo
+            vc.username = photo.user?.userName
+            vc.avatarImage = photo.user?.avatarImage
+            vc.photoImage = photo.image
+            vc.caption = photo.caption
+            vc.createAtString = photo.createdAtString
+            
+            
         }
     }
 
