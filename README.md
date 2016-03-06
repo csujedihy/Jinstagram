@@ -27,18 +27,18 @@ The following **additional** features are implemented:
 
 - [x] Profile settings view which allows user to change avatar and update status- [x] Seamless update description and avatar image after changing them
 - [x] Photo Model support cache and safe photo fetching which avoid setting to a recycled cell when network is lagging
-- [x] Detail photo view which I have not figure out whether I should put more stuff in it
+- [x] Detail photo view
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. 
-2. 
+1. How Appdelegate initializes views and window?
+2. Better improvement on Async loading in table view with operation cancellation
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/CIAblHH.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
