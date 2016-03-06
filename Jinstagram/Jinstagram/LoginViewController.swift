@@ -18,13 +18,11 @@ class LoginViewController: UIViewController, HomeViewControllerDelegate {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
-    
-    
-    @IBAction func signInOnTap(sender: AnyObject) {
+    func login() {
         PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 print("Login successfully")
-//                self.performSegueWithIdentifier("loginSegue", sender: nil)
+                //                self.performSegueWithIdentifier("loginSegue", sender: nil)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeNC = storyboard.instantiateViewControllerWithIdentifier("HomeNavController") as! UINavigationController
                 let homeVC = homeNC.topViewController as! HomeViewController
@@ -32,19 +30,23 @@ class LoginViewController: UIViewController, HomeViewControllerDelegate {
                 homeVC.fromLoginView = true
                 homeNC.tabBarItem.title = "Home"
                 homeNC.tabBarItem.image = UIImage(named: "home")
-
+                
                 
                 let profileNC = storyboard.instantiateViewControllerWithIdentifier("ProfileNavController")
                 profileNC.tabBarItem.title = "Me"
                 profileNC.tabBarItem.image = UIImage(named: "profile")
-
+                
                 
                 let tabBarController = UITabBarController()
                 tabBarController.viewControllers = [homeNC, profileNC]
                 self.presentViewController(tabBarController, animated: true, completion: nil)
-
+                
             }
         }
+    }
+    
+    @IBAction func signInOnTap(sender: AnyObject) {
+        login()
     }
     
     func homeView(didLogout homeView: HomeViewController) {
@@ -63,6 +65,8 @@ class LoginViewController: UIViewController, HomeViewControllerDelegate {
         newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {
                 print("Yay, created a user!")
+                self.login()
+                
             } else {
                 print(error?.localizedDescription)
             }

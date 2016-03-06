@@ -22,7 +22,7 @@
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.78000000000000003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Jq-Cj-11u">
                                 <rect key="frame" x="32" y="137" width="257" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.78000000000000003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5p-yV-g58">
                                 <rect key="frame" x="32" y="187" width="257" height="30"/>
@@ -263,6 +263,7 @@
                                         <outlet property="descriptionLabel" destination="Mdq-PL-FoT" id="k5a-yh-QKV"/>
                                         <outlet property="likeNumberLabel" destination="nSM-l6-bOk" id="1SW-CR-WME"/>
                                         <outlet property="postNumberLabel" destination="PmC-YV-rx5" id="YSG-OG-aMR"/>
+                                        <outlet property="settingButton" destination="RH9-u7-yWN" id="vQU-sH-FNh"/>
                                         <outlet property="usernameLabel" destination="f5T-Y0-Ie7" id="HFg-Of-tEB"/>
                                     </connections>
                                 </collectionReusableView>
