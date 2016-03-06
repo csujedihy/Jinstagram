@@ -17,7 +17,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TeddyBear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyy-fZ-7DJ">
                         <rect key="frame" x="48" y="16" width="70" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI4-Pn-rJS">
@@ -33,30 +33,21 @@
                             <constraint firstAttribute="height" constant="32" id="RdZ-bo-zfE"/>
                         </constraints>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcW-E4-OcE" userLabel="seperator">
-                        <rect key="frame" x="0.0" y="48" width="320" height="1"/>
-                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="ieY-6p-GGN"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ggp-Cn-3qr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="6Dc-sa-gNK"/>
                     <constraint firstItem="Lyy-fZ-7DJ" firstAttribute="leading" secondItem="ggp-Cn-3qr" secondAttribute="trailing" constant="8" id="9sX-JU-aMI"/>
-                    <constraint firstAttribute="bottom" secondItem="pcW-E4-OcE" secondAttribute="bottom" id="BLk-nt-q0u"/>
                     <constraint firstItem="LI4-Pn-rJS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Chc-0l-sJx"/>
-                    <constraint firstAttribute="trailing" secondItem="pcW-E4-OcE" secondAttribute="trailing" id="GEQ-I5-Ihq"/>
-                    <constraint firstItem="pcW-E4-OcE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TC8-EE-b7k"/>
+                    <constraint firstItem="ggp-Cn-3qr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ddU-ng-9J9"/>
                     <constraint firstAttribute="bottom" secondItem="ggp-Cn-3qr" secondAttribute="bottom" constant="8.5" id="hFL-Qf-bSm"/>
                     <constraint firstItem="ggp-Cn-3qr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="lr6-Z7-eat"/>
                     <constraint firstAttribute="trailing" secondItem="LI4-Pn-rJS" secondAttribute="trailing" constant="8.5" id="uX2-AW-8MC"/>
-                    <constraint firstItem="LI4-Pn-rJS" firstAttribute="top" secondItem="pcW-E4-OcE" secondAttribute="bottom" id="vuv-nF-BzU"/>
                     <constraint firstItem="Lyy-fZ-7DJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xPO-yA-52S"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="vuv-nF-BzU"/>
+                        <exclude reference="hFL-Qf-bSm"/>
+                        <exclude reference="lr6-Z7-eat"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
@@ -65,7 +56,7 @@
                 <outlet property="timeLabel" destination="LI4-Pn-rJS" id="KrT-ma-it9"/>
                 <outlet property="usernameLabel" destination="Lyy-fZ-7DJ" id="h9h-3W-ZV5"/>
             </connections>
-            <point key="canvasLocation" x="546" y="334"/>
+            <point key="canvasLocation" x="546" y="334.5"/>
         </tableViewCell>
     </objects>
     <resources>

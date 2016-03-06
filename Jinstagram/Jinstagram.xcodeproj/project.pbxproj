@@ -324,6 +324,7 @@
 				TargetAttributes = {
 					C12F764C1C8544B60059EC65 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = F697GBXU4H;
 					};
 					C12F76601C8544B70059EC65 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -603,10 +604,13 @@
 			baseConfigurationReference = BCA23533D12B302980DCBF40 /* Pods-Jinstagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Jinstagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.c2fun.Jinstagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -615,10 +619,13 @@
 			baseConfigurationReference = 3542A9EC117C9025E7F72D0A /* Pods-Jinstagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Jinstagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.c2fun.Jinstagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

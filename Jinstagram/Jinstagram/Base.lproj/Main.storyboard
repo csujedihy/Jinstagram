@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -301,7 +301,7 @@
                                         <rect key="frame" x="0.0" y="99" width="320" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dN7-uG-QqJ" id="hld-bB-rxp">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="93.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="mzZ-Ya-fJC" customClass="YHLazyImageView" customModule="Jinstagram" customModuleProvider="target">
@@ -330,7 +330,7 @@
                                         <rect key="frame" x="0.0" y="193" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OPC-Pw-QKg" id="f0q-aS-gPT">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbJ-KW-RbC">
@@ -362,7 +362,7 @@
                                         <rect key="frame" x="0.0" y="237" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CL0-nO-eld" id="LG6-dv-SQj">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -477,6 +477,7 @@
                     <navigationItem key="navigationItem" id="qVu-Pw-E8x"/>
                     <connections>
                         <outlet property="closeButton" destination="qbz-4Q-xIq" id="mxB-Jw-E7i"/>
+                        <outlet property="postButton" destination="GPd-3r-wjg" id="dlw-D6-1cl"/>
                         <outlet property="takenPhotoImageView" destination="dCo-Ed-ppn" id="nuf-fF-Cee"/>
                         <outlet property="toolBar" destination="mbs-tE-vvU" id="Gb8-Ds-M1V"/>
                         <outlet property="toolBarTextField" destination="oIR-Kk-RBR" id="v24-Ua-fTA"/>
@@ -484,32 +485,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWN-zf-SqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mbs-tE-vvU">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="498" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
                         <barButtonItem style="plain" id="Lyz-Vk-hUL">
                             <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="oIR-Kk-RBR">
-                                <rect key="frame" x="16" y="7" width="234" height="30"/>
+                                <rect key="frame" x="20" y="7" width="302" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </barButtonItem>
-                        <barButtonItem width="14" style="plain" systemItem="fixedSpace" id="Oe7-wm-DGs"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="46K-0L-mp5"/>
+                        <barButtonItem width="11" style="plain" systemItem="fixedSpace" id="0Vm-XZ-vyF"/>
                         <barButtonItem style="plain" id="lMc-Wx-lza">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GPd-3r-wjg">
-                                <rect key="frame" x="274" y="7" width="31" height="30"/>
+                                <rect key="frame" x="425" y="7" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Post"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="postOnTap:" destination="4zw-S7-r8R" eventType="touchUpInside" id="cQr-rE-EBL"/>
                                 </connections>
                             </button>
-                            <color key="tintColor" red="0.1019607843" green="0.2156862745" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="toolBarPost:" destination="4zw-S7-r8R" id="Jlm-Pf-okn"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem width="5" style="plain" systemItem="fixedSpace" id="BJI-Gw-EAG"/>
                     </items>
                 </toolbar>
                 <tapGestureRecognizer id="pk6-FC-Uew">

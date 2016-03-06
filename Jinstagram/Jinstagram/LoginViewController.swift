@@ -41,6 +41,17 @@ class LoginViewController: UIViewController, HomeViewControllerDelegate {
                 tabBarController.viewControllers = [homeNC, profileNC]
                 self.presentViewController(tabBarController, animated: true, completion: nil)
                 
+            } else {
+                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .Alert)
+                let cancelAction = UIAlertAction(title: "Try again", style: .Cancel) {
+                    (action) in
+                    self.passwordField.text = ""
+                    
+                }
+
+                alertController.addAction(cancelAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
             }
         }
     }
@@ -68,6 +79,15 @@ class LoginViewController: UIViewController, HomeViewControllerDelegate {
                 self.login()
                 
             } else {
+                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .Alert)
+                let cancelAction = UIAlertAction(title: "Ok", style: .Cancel) {
+                    (action) in
+                    self.passwordField.text = ""
+                    
+                }
+                
+                alertController.addAction(cancelAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
                 print(error?.localizedDescription)
             }
         }

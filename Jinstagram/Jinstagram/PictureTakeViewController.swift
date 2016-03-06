@@ -20,8 +20,10 @@ class PictureTakeViewController: UIViewController {
     @IBOutlet weak var toolBarTextField: UITextField!
     @IBOutlet var toolBar: UIToolbar!
     
+    @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var takenPhotoImageView: UIImageView!
     @IBOutlet weak var closeButton: UIButton!
+    
     
     @IBAction func closeOnTap(sender: AnyObject) {
         dismissViewControllerAnimated(true) {
@@ -91,7 +93,9 @@ class PictureTakeViewController: UIViewController {
         super.viewDidLoad()
         takenPhotoImageView.image = takenPhoto
         
-        
+        postButton.layer.cornerRadius = 4.0
+        postButton.layer.borderWidth = 1.0
+        postButton.layer.borderColor = UIColor(white: 0.8, alpha: 0.79).CGColor
         
         
         // Do any additional setup after loading the view.
