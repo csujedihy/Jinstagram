@@ -40,7 +40,6 @@ class Photo: NSObject {
         if let createdAt = pfObject.createdAt {
             self.createdAt = createdAt
             self.createdAtString = self.createdAt?.between()
-            print(createdAtString)
         }
         
         
@@ -57,7 +56,7 @@ class Photo: NSObject {
         if let pfObject = self.pfObject {
             if let objectId = self.objectId {
                 if let cachedImage = Photo.sharedCache.objectForKey(objectId) {
-                    print("cached")
+                    self.image = cachedImage as? UIImage
                     success(retImage: cachedImage as! UIImage)
                     return
                 }
@@ -157,12 +156,10 @@ class Photo: NSObject {
         query.findObjectsInBackgroundWithBlock { (media: [PFObject]?, error: NSError?) -> Void in
             if let media = media {
                 let mediaNum = media.count
-                print(mediaNum)
                 var currentMedia = 0
                 for pfObj in media {
                     currentMedia += 1
                     let id = pfObj.objectId
-                    print(id)
                     
                     let author = pfObj.objectForKey("caption") as! String
                     let imageFile = pfObj.objectForKey("media") as! PFFile

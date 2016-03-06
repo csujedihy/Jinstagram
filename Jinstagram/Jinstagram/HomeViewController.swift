@@ -58,7 +58,6 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-            print("asdasd")
             let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
             dismissViewControllerAnimated(true, completion: {

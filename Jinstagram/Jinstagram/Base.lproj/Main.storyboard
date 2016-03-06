@@ -385,7 +385,7 @@
             </objects>
             <point key="canvasLocation" x="1533" y="1237"/>
         </scene>
-        <!--Description-->
+        <!--Update Description View Controller-->
         <scene sceneID="MVd-RO-ROo">
             <objects>
                 <viewController id="UGW-hj-sZ2" customClass="UpdateDescriptionViewController" customModule="Jinstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -414,7 +414,7 @@
                             <constraint firstAttribute="trailing" secondItem="gbC-Se-X6g" secondAttribute="trailing" constant="8" id="ahU-DF-exV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Description" id="aCa-kj-zAF">
+                    <navigationItem key="navigationItem" id="aCa-kj-zAF">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="n0u-yy-J80">
                             <connections>
                                 <action selector="doneOnTap:" destination="UGW-hj-sZ2" id="EJ7-uW-HMI"/>

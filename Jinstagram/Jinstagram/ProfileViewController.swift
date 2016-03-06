@@ -34,7 +34,8 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
                     
             }
         } else {
-            Photo.lazyFetchPhotosArray({ (retPhotos: [Photo]) -> () in
+            let currentUser = User(pfUser: PFUser.currentUser()!)
+            Photo.lazyFetchPhotosArrayFromUser(currentUser, success: { (retPhotos: [Photo]) -> () in
                 self.photos = retPhotos
                 self.collectionView.reloadData()
                 
@@ -57,6 +58,13 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         }
 
         
+    }
+    
+    func profileSetting(profileSetting: ProfileSettingController, didUpdateDescription updatedDescritptionText: String?) {
+        if let headerIndexPath = self.headerIndexPath {
+            let headerView = collectionView.supplementaryViewForElementKind(UICollectionElementKindSectionHeader, atIndexPath: headerIndexPath) as! ProfileSectionHeader
+            headerView.descriptionLabel.text = updatedDescritptionText
+        }
     }
 
 

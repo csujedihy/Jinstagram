@@ -19,10 +19,9 @@ extension NSDate {
                 return "Now"
             case 1...3599:
                 // minutes case
-                return "\(interval/3600)m"
+                return "\(interval/60)m"
             case 3600...86399:
-                let hour = interval/3600
-                return "\(hour)h"
+                return "\(interval/3600)h"
             case 86400...2592000:
                 return "\(interval/86400)d"
             case 2592000...31104000:
